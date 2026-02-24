@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Modelo Predictivo de Parto Pretérmino</title>
+
+<style>
+:root{
+    --azul-oscuro:#002147;
+    --azul-medio:#003366;
+    --gris-claro:#f4f6f9;
+    --verde-boton:#2A9D8F;
+    --verde-hover:#21867A;
+}
+
+body{
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin:0;
+    padding:0;
+    line-height:1.7;
+    color:#333;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* NAV */
+nav{
+    background:var(--azul-oscuro);
+    padding:18px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    margin:0 18px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:15px;
+}
+
+nav a:hover{
+    opacity:0.8;
+}
+
+/* HEADER */
+.header-principal{
+    text-align:center;
+    padding:80px 20px 50px 20px;
+    background:linear-gradient(to right, #ffffff, #f7f9fc);
+}
+
+.header-principal h1{
+    color:var(--azul-oscuro);
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.subtitulo{
+    font-size:19px;
+    color:#555;
+    max-width:750px;
+    margin:0 auto;
+}
+
+/* SECCIONES */
+section{
+    padding:70px 15%;
+}
+
+h2{
+    color:var(--azul-oscuro);
+    margin-bottom:25px;
+}
+
+.section-gray{
+    background:var(--gris-claro);
+}
+
+p{
+    text-align:justify;
+}
+
+/* BOTÓN CENTRADO */
+.btn-container{
+    text-align:center;
+    margin-top:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    background-color:var(--verde-boton);
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:600;
+    font-size:16px;
+    transition:all 0.3s ease;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn:hover{
+    background-color:var(--verde-hover);
+    transform:translateY(-3px);
+    box-shadow:0 6px 18px rgba(0,0,0,0.2);
+}
+/* PERFIL */
+.perfil-container{
+    display:flex;
+    align-items:center;
+    gap:50px;
+    margin-top:40px;
+}
+
+.perfil-foto img{
+    width:280px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
+
+.perfil-texto{
+    flex:1;
+}
+
+/* BOTÓN ORCID */
+.orcid-container{
+    text-align:center;
+    margin-top:40px;
+}
+
+.btn-orcid{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 24px;
+    background-color:#A6CE39;
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    font-size:15px;
+    transition:all 0.3s ease;
+    box-shadow:none;   /* quitamos sombra */
+}
+
+.btn-orcid:hover{
+    background-color:#8bb92f;
+    transform:scale(1.05);
+}
+
+
+/* FOOTER */
+footer{
+    background:var(--azul-oscuro);
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <a href="#descripcion">Descripción</a>
+    <a href="#aplicacion">Aplicación</a>
+    <a href="#perfil">Equipo del proyecto</a>
+    <a href="#referencias">Referencias</a>
+    <a href="#contacto">¿Qué más trabajamos?</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<!-- TÍTULO CENTRADO -->
+<div class="header-principal">
+    <h1>Modelo Predictivo de Parto Pretérmino</h1>
+    <p><strong></strong>
+    <p style="text-align: center;">Estimación temprana del riesgo de parto pretérmino mediante biomarcadores maternos del primer trimestre<strong></strong></p>
+</div>
+
+<!-- DESCRIPCIÓN -->
+<section id="descripcion">
+    <h2>Descripción General</h2>
+
+    <p>
+        Esta herramienta permite estimar el <strong>riesgo individual de parto pretérmino</strong>
+        mediante un modelo de regresión logística desarrollado a partir de factores clínicos maternos,
+        el <strong>Índice de Consistencia Cervical (CCI)</strong> y los niveles séricos del
+        <strong>Factor H del complemento</strong> evaluados durante el primer trimestre del embarazo.
+    </p>
+
+    <p>
+        El modelo integra información clínica y biomarcadores con potencial valor pronóstico,
+        proporcionando una aproximación cuantitativa al riesgo obstétrico temprano y
+        contribuyendo a la toma de decisiones en medicina materno-fetal.
+    </p>
+</section>
+
+<!-- APLICACIÓN -->
+<section id="aplicacion" class="section-gray">
+    <h2>Acceder a la aplicación</h2>
+        <p>Haz clic en el siguiente enlace para ingresar a la aplicación Shiny:</p>
+
+        <a class="btn" href="https://lauraczg.shinyapps.io/partoapp-1/" target="_blank">
+            Ingresar a la aplicación
+        </a>
+</section>
+
+<!-- PERFIL PROFESIONAL -->
+<section id="perfil">
+    <h2>Equipo del proyecto</h2>
+
+<div class="perfil-container">
+
+    <div class="perfil-foto">
+        <img src="FOTO.jpeg" alt="Dr. Carlos Hernán Becerra Mojica" style="max-width: 80%; height: auto;">
+    </div>
+
+    <div class="perfil-texto">
+
+        <h3>Dr. Carlos Hernán Becerra Mojica</h3>
+         <p class="rol">
+            <strong>Encargado del proyecto</strong>
+        </p>
+       <p>
+Especialista en Ginecología y Obstetricia con énfasis en Medicina Materno-Fetal. 
+Docente de la Universidad Industrial de Santander desde 1996 y líder del grupo de investigación <strong>GINO</strong> (Categoría C, Minciencias). 
+Pionero en la unidad materno-fetal del Hospital Universitario de Santander y en la introducción de la cirugía fetal en Colombia. 
+Actualmente cursa <strong>Doctorado en Ciencias Biomédicas</strong>, con investigación en predicción temprana del parto pretérmino.
+</p>
+ <a class="btn btn-orcid"
+           href="https://orcid.org/0000-0003-3188-530X"
+           target="_blank">
+           Ver perfil ORCID
+        </a>
+</div>
+
+</div>
+<!-- AQUÍ SE COLOCARIAN LAS CUATRO FOTOS DE COLABORADORES -->
+
+</section>
+<!-- REFERENCIAS -->
+
+<section id="referencias" class="section-gray">
+    <h2>Referencias bibliográficas</h2>
+        <ul>
+          <div style="text-align: center;">
+    <img src="Articulo_2.png" alt="Imagen" style="max-width: 50%; height: auto;">
+</div>
+            <li>
+                Becerra, C., Mora, E., Parra, M., Martinez, R., Diaz, L.A., Torres, J., & Rincon, B. (2024).  
+                <em>Low levels of complement factor H in the first trimester of pregnancy are associated with 
+                spontaneous preterm birth.</em> International Journal of Molecular Sciences, 25(19).  
+                Disponible en: https://www.mdpi.com/1422-0067/25/19/10549
+            </li>
+            <br>
+             <div style="text-align: center;">
+    <img src="Articulo_3.png" alt="Imagen" style="max-width: 50%; height: auto;">
+</div>
+            <li>
+                Becerra, C., Parra, M., Martinez, R., Diaz, L.A., Martinez, R., Torres, J., & Rincon, B. (2024).  
+                <em>Performance of the first-trimester cervical consistency index to predict preterm birth.</em>  
+                Journal of Clinical Medicine, 13.  
+                Disponible en: https://www.mdpi.com/2077-0383/13/13/3906
+            </li>
+        </ul>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+    <h2>Contacto</h2>
+        <p>
+          <p> Para información académica o científica relacionada con el modelo:</p>
+            <strong>Correo:</strong> chbecerra@hotmail.com  
+        </p>
+</section>
+
+<footer>
+    © 2026 Modelo Predictivo de Parto Pretérmino 
+</footer>
+
+</body>
+</html>
